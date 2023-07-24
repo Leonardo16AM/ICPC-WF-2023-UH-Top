@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'team-reference-2023/reference.tex'
+      - 'team-reference-2023/render.py'
 
 jobs:
   build:
@@ -10,7 +11,21 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
-      
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install jinja2
+
+      - name: Generate LaTeX with render.py
+        run: |
+          python team-reference-2023/render.py
+
       - name: Compile LaTeX
         uses: docker://blang/latex:ubuntu
         with:
