@@ -9,11 +9,11 @@ CONTEXT = {
     "TeamName": "UH-Top",
     "Event": "ICPC World Final 2023",
     "TeamMembers": [
-        "Marcelo Jos\\'e Fornet Forn\\'es",
-        "Ariel Cruz Cruz",
-        "Eloy P\\'erez Torres"
+        "David ",
+        "Pichardo",
+        "Leonardo"
     ],
-    "Coach": "Jos\\'e Carlos Guti\\'errez P\\'erez"
+    "Coach": "Alfredo Somoza"
 }
 
 ALG_NAMES = {
