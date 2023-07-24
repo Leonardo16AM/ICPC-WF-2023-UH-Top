@@ -1,9 +1,10 @@
-name: Compile LaTeX document
+name: Generate LaTeX PDF
 on:
   push:
     paths:
       - 'team-reference-2023/reference.tex'
       - 'team-reference-2023/render.py'
+      - 'team-reference-2023/template.tex'
 
 jobs:
   build:
@@ -22,14 +23,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install jinja2
 
-      - name: Generate LaTeX with render.py
+      - name: Generate PDF with render.py
         run: |
-          python team-reference-2023/render.py
-
-      - name: Compile LaTeX
-        uses: docker://blang/latex:ubuntu
-        with:
-          args: pdflatex -interaction=nonstopmode team-reference-2023/reference.tex
+          cd team-reference-2023/
+          python render.py
 
       - name: Upload PDF
         uses: actions/upload-artifact@v2
