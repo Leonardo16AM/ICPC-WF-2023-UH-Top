@@ -1,0 +1,23 @@
+name: Compile LaTeX document
+on:
+  push:
+    paths:
+      - 'team-reference-2023/reference.tex'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      
+      - name: Compile LaTeX
+        uses: docker://blang/latex:ubuntu
+        with:
+          args: pdflatex -interaction=nonstopmode team-reference-2023/reference.tex
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: team-reference-2023/reference.pdf
