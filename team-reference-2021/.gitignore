@@ -1,0 +1,9 @@
+*.gz
+*.aux
+*.log
+*.pdf
+*.toc
+*.dvi
+.vscode
+
+reference-guide.tex
