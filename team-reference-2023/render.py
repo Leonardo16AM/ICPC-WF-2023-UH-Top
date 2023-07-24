@@ -6,8 +6,8 @@ import subprocess
 
 CONTEXT = {
     "University": "Universidad de la Habana",
-    "TeamName": "UH++",
-    "Event": "ACM-ICPC Caribbean Finals 2016",
+    "TeamName": "UH-Top",
+    "Event": "ICPC World Final 2023",
     "TeamMembers": [
         "Marcelo Jos\\'e Fornet Forn\\'es",
         "Ariel Cruz Cruz",
