@@ -1,0 +1,289 @@
+\documentclass[letter]{amsart}
+\usepackage[pdftex]{geometry}
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{courier}
+\usepackage{fancyhdr}
+
+\lstset{language=C++}
+\lstset{columns=fullflexible}
+\lstset{basicstyle=\scriptsize\ttfamily}
+\lstset{showspaces=false}
+
+\geometry{landscape}
+\setlength{\topmargin}{-0.25in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\columnsep}{1in}
+\setlength{\columnseprule}{0.2pt}
+\textwidth 9.5in
+
+\pagestyle{fancy}
+\lhead{ Universidad de la Habana: UH-Top }
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\newcommand{\includecpp}[3]{
+  \begin{multicols}{2}
+    [\subsection{#1}\ ]
+    \lstinputlisting[language=c++]{#2/#3}
+  \end{multicols}
+}
+
+\newcommand{\includejava}[3]{
+  \begin{multicols}{2}
+    [\subsection{#1}\ ]
+    \lstinputlisting[language=Java]{#2/#3}
+  \end{multicols}
+}
+
+\newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
+\newcommand{\stirlingsecond}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+
+\begin{document}
+  \thispagestyle{fancy}
+  \begin{center}
+    \Huge\textsc{Team Reference \\ Universidad de la Habana : UH-Top }
+  \end{center}
+  
+  \begin{center}
+    \textbf{ ICPC Caribbean Finals 2024 }\\
+    \textbf{Team Members:} Ariel Gonzales Gomez , Jorge Pichardo Cabrera, Leonardo Artiles Montero\\
+    \textbf{Developed by:} Alfredo Somoza
+  \end{center}  
+
+  \begin{multicols}{2}
+    \tableofcontents
+  \end{multicols}
+
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Number Theory }
+     \includecpp {Divisor Sigma}{./number_theory}{divisor_sigma.cpp}
+     \includecpp {Discrete Logarithm}{./number_theory}{discrete_logarithm.cpp}
+     \includecpp {Farey}{./number_theory}{farey.cpp}
+     \includecpp {Ext Gcd2}{./number_theory}{ext_gcd2.cpp}
+     \includecpp {Primitive Root}{./number_theory}{primitive_root.cpp}
+     \includecpp {Carmichael Lambda}{./number_theory}{carmichael_lambda.cpp}
+     \includecpp {Sieve}{./number_theory}{sieve.cpp}
+     \includecpp {$C(n, m)/mod p$}{./number_theory}{C_n_k.cpp}
+     \includecpp {Miscelanea(tourist)}{./number_theory}{miscelanea(tourist).cpp}
+     \includecpp {Mod Fact}{./number_theory}{mod_fact.cpp}
+     \includecpp {Pollard Rho}{./number_theory}{pollard_rho.cpp}
+     \includecpp {Euler Phi}{./number_theory}{euler_phi.cpp}
+     \includecpp {Extended GCD}{./number_theory}{ext_gcd.cpp}
+     \includecpp {Modular Arithmetics}{./number_theory}{modular_arithmetics.cpp}
+     \includecpp {Discrete Roots}{./number_theory}{discrete_roots.cpp}
+     \includecpp {Sqrt Mod}{./number_theory}{sqrt_mod.cpp}
+     \includecpp {Miller Rabin}{./number_theory}{miller_rabin.cpp}
+     \includecpp {Chinese Rem}{./number_theory}{chinese_rem.cpp}
+     \includecpp {Linear Congruences}{./number_theory}{linear_congruences.cpp}
+     \includecpp {Sqrt Mod(yosupo)}{./number_theory}{sqrt_mod(yosupo).cpp}
+     \includecpp {Mobius Mu}{./number_theory}{mobius_mu.cpp}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Misc }
+     \includecpp {Random}{./misc}{random.cpp}
+     \includecpp {Useful}{./misc}{useful.cpp}
+     \includecpp {Partition $O(n /sqrt n)$}{./misc}{partition.cpp}
+     \includecpp {Josephus}{./misc}{josephus.cpp}
+     \includecpp {Cube}{./misc}{cube.cpp}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Math }
+     \includecpp {Linear Recursion}{./math}{linear_recursion.cpp}
+     \includecpp {Minimum assignment (Jonker-Volgenant)}{./math}{assignment.cpp}
+     \includecpp {Integrate}{./math}{integrate.cpp}
+     \includecpp {Roots Newton}{./math}{roots_newton.cpp}
+     \includecpp {Bitmatrix}{./math}{bitmatrix.cpp}
+     \includecpp {1^k+2^k+...+n^k(faulhaber polynomials)(dmga44)}{./math}{1^k+2^k+...+n^k(faulhaber polynomials)(dmga44).cpp}
+     \includecpp {Lagrange interpolation(dmga44)}{./math}{lagrange interpolation(dmga44).cpp}
+     \includecpp {Descomposiciones de una matriz no singular(dmga44)}{./math}{descomposiciones de una matriz no singular(dmga44).cpp}
+     \includecpp {Polynomial Int}{./math}{polynomial_int.cpp}
+     \includecpp {Goldsection Search}{./math}{goldsection_search.cpp}
+     \includecpp {Simpson}{./math}{simpson.cpp}
+     \includecpp {Combine ntt and fwht(dmga44)}{./math}{combine NTT and FWHT(dmga44).cpp}
+     \includecpp {Fft(con mas cosas)(tourist)}{./math}{FFT(con mas cosas)(tourist).cpp}
+     \includecpp {Fast Modulo Transform}{./math}{fast_modulo_transform.cpp}
+     \includecpp {Gauss}{./math}{gauss.cpp}
+     \includecpp {Descomposiciones de una matriz con determinante distinto de 0(dmga44)}{./math}{descomposiciones de una matriz con determinante distinto de 0(dmga44).cpp}
+     \includecpp {Matrix Computation Algorithms}{./math}{matrix_double.cpp}
+     \includecpp {Simple ntt(naimss)}{./math}{simple NTT(NaimSS).cpp}
+     \includecpp {Matrix exponentiation(dmga44)}{./math}{matrix exponentiation(dmga44).cpp}
+     \includecpp {Fast Fourier Transform}{./math}{fast_fourier_transform.cpp}
+     \includecpp {Modint}{./math}{ModInt.cpp}
+     \includecpp {Simplex}{./math}{simplex.cpp}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Dynamic Programming }
+     \includecpp {Convex Hull Trick}{./dynamic_programming}{convex_hull_trick.cpp}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Java }
+     \includejava {Template}{./java}{template.java}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Data Structures }
+     \includecpp {Segment tree iterativo(dmga44)}{./data_structures}{segment tree iterativo(dmga44).cpp}
+     \includecpp {Heavy Light Decomposition}{./data_structures}{heavy_light_decomposition.cpp}
+     \includecpp {Red-black tree}{./data_structures}{Red-black Tree.cpp}
+     \includecpp {Splay tree (ii)}{./data_structures}{Splay Tree (II).cpp}
+     \includecpp {Insertar puntos y contar en rectangulo(dmga44)}{./data_structures}{insertar puntos y contar en rectangulo(dmga44).cpp}
+     \includecpp {Rmq(dmga44)}{./data_structures}{RMQ(dmga44).cpp}
+     \includecpp {Persistent Array}{./data_structures}{persistent_array.cpp}
+     \includecpp {Randomized Kd Tree}{./data_structures}{randomized_kd_tree.cpp}
+     \includecpp {Lca (ii)}{./data_structures}{LCA (II).cpp}
+     \includecpp {Persistent st implicito(dmga44)}{./data_structures}{persistent ST implicito(dmga44).cpp}
+     \includecpp {Li chao tree (leonardo16)}{./data_structures}{Li Chao Tree (Leonardo16).cpp}
+     \includecpp {Persistent st lazy(usando pool)(dmga44)}{./data_structures}{persistent ST lazy(usando pool)(dmga44).cpp}
+     \includecpp {Trie}{./data_structures}{Trie.cpp}
+     \includecpp {Lca dp(dmga44)}{./data_structures}{LCA DP(dmga44).cpp}
+     \includecpp {Treap(superarray)(dmga44)}{./data_structures}{treap(superarray)(dmga44).cpp}
+     \includecpp {Segment tree 2d(dmga44)}{./data_structures}{segment tree 2D(dmga44).cpp}
+     \includecpp {Segment tree for historic sum query and flip interval update(dmga44)}{./data_structures}{segment tree for historic sum query and flip interval update(dmga44).cpp}
+     \includecpp {Segment tree implicitus(dmga44)}{./data_structures}{segment tree implicitus(dmga44).cpp}
+     \includecpp {Queue undo trick(devil)}{./data_structures}{Queue Undo Trick(Devil).cpp}
+     \includecpp {Abi for sum range queries and updates(dmga44)}{./data_structures}{ABI for sum range queries and updates(dmga44).cpp}
+     \includecpp {Vantage Point Tree}{./data_structures}{vantage_point_tree.cpp}
+     \includecpp {Persistent trie(dmga44)}{./data_structures}{persistent trie(dmga44).cpp}
+     \includecpp {Treap (2)}{./data_structures}{Treap (2).cpp}
+     \includecpp {Splay tree (i)}{./data_structures}{Splay Tree (I).cpp}
+     \includecpp {Segment tree (dmga44)}{./data_structures}{segment tree (dmga44).cpp}
+     \includecpp {Avl tree}{./data_structures}{AVL Tree.cpp}
+     \includecpp {Segment tree lazy(dmga44)}{./data_structures}{segment tree lazy(dmga44).cpp}
+     \includecpp {Treap(order statistic)(dmga44)}{./data_structures}{treap(order statistic)(dmga44).cpp}
+     \includecpp {Hld(changed)}{./data_structures}{HLD(changed).cpp}
+     \includecpp {Dsu with rollbacks(brayand)}{./data_structures}{DSU with rollbacks(BrayanD).cpp}
+     \includecpp {Union Find}{./data_structures}{union_find.cpp}
+     \includecpp {Order Statistic}{./data_structures}{order_statistic.cpp}
+     \includecpp {Persistent st(usando pool)(dmga44)}{./data_structures}{persistent ST(usando pool)(dmga44).cpp}
+     \includecpp {Treap}{./data_structures}{treap.cpp}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Geometry }
+     \includecpp {Pick Theorem}{./geometry}{pick_theorem.cpp}
+     \includecpp {Line Segment Intersections}{./geometry}{line_segment_intersections.cpp}
+     \includecpp {Convex Hull}{./geometry}{convex_hull.cpp}
+     \includecpp {Contar cantidad de triangulos}{./geometry}{contar cantidad de triangulos.cpp}
+     \includecpp {Rectangle Union}{./geometry}{rectangle_union.cpp}
+     \includecpp {Minkowski}{./geometry}{minkowski.cpp}
+     \includecpp {Closest Pair Points}{./geometry}{closest_pair_points.cpp}
+     \includecpp {Centroid}{./geometry}{centroid.cpp}
+     \includecpp {Angular Sort(dmga44)+cantidad de triangulos que incluyen a un punto}{./geometry}{angular_sort(dmga44)+cantidad de triangulos que incluyen a un punto.cpp}
+     \includecpp {Points 3D}{./geometry}{point3d.cpp}
+     \includecpp {Convex Hull3d}{./geometry}{convex_hull3d.cpp}
+     \includecpp {Semiplane Intersection}{./geometry}{semiplane_intersection.cpp}
+     \includecpp {Convex Hull3d(monogon)}{./geometry}{convex_hull3d(monogon).cpp}
+     \includecpp {Polygon Width}{./geometry}{polygon_width.cpp}
+     \includecpp {Antipodal Points}{./geometry}{antipodal_points.cpp}
+     \includecpp {Upper Hull(monotone in x and y, and in first quadrant)}{./geometry}{upper_hull(monotone in x and y, and in first quadrant).cpp}
+     \includecpp {Contains(polygon, set of points)(dmga44)}{./geometry}{contains(polygon, set of points)(dmga44).cpp}
+     \includecpp {Polygon Area}{./geometry}{area2_pol.cpp}
+     \includecpp {Rectilinear Mst}{./geometry}{rectilinear_mst.cpp}
+     \includecpp {Basics}{./geometry}{basics.cpp}
+     \includecpp {Circle}{./geometry}{circle.cpp}
+     \includecpp {Points in Polygon}{./geometry}{contains.cpp}
+     \includecpp {Delaunay triangulation - fortune's algorithm(monogon)}{./geometry}{Delaunay Triangulation - Fortune's Algorithm(monogon).cpp}
+     \includecpp {Convex Cut}{./geometry}{convex_cut.cpp}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Helpers }
+     \includecpp {Vectors}{./helpers}{vectors.cpp}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Graph }
+     \includecpp {Centroid Decomp(dmga44)}{./graph}{Centroid_Decomp(dmga44).cpp}
+     \includecpp {Max Flow Dinic}{./graph}{max_flow_dinic.cpp}
+     \includecpp {Dominator Tree}{./graph}{dominator_tree.cpp}
+     \includecpp {LCA (Euler-tour + RMQ)}{./graph}{lca_sparse_table.cpp}
+     \includecpp {Off-line LCA (Tarjan)}{./graph}{offline_lca.cpp}
+     \includecpp {Bipartite Matching}{./graph}{bipartite_matching.cpp}
+     \includecpp {Gomory Hu Tree}{./graph}{gomory_hu_tree.cpp}
+     \includecpp {Chu-Liu/Edmonds $O(E/log V)$}{./graph}{arborescence.cpp}
+     \includecpp {Given a matrix, take at least one position from each row and column summing the minimum}{./graph}{given a matrix, take at least one position from each row and column summing the minimum.cpp}
+     \includecpp {Max Flow Push Relabel}{./graph}{max_flow_push_relabel.cpp}
+     \includecpp {Gabow Edmonds}{./graph}{gabow_edmonds.cpp}
+     \includecpp {Bridges}{./graph}{bridges.cpp}
+     \includecpp {Bipartite Matching (Hopcroft-Karp)}{./graph}{hopcroft_karp.cpp}
+     \includecpp {Satisfiability Twosat}{./graph}{satisfiability_twosat.cpp}
+     \includecpp {Euler Tour}{./graph}{euler_tour.cpp}
+     \includecpp {Dinic(c++)}{./graph}{dinic(c++).cpp}
+     \includecpp {Min Cost Max Flow}{./graph}{min_cost_max_flow.cpp}
+     \includecpp {Gabow SCC}{./graph}{scc_gabow.cpp}
+     \includecpp {Is Graphic}{./graph}{is_graphic.cpp}
+     \includecpp {Stoer Wagner}{./graph}{stoer_wagner.cpp}
+     \includecpp {Flow With Lower Bound}{./graph}{flow_with_lower_bound.cpp}
+     \includecpp {Tree Isomorphism}{./graph}{tree_isomorphism.cpp}
+     \includecpp {Hungarian}{./graph}{hungarian.cpp}
+     \includecpp {Chu-Liu/Edmonds $O(EV)$}{./graph}{arborescence2.cpp}
+     \includecpp {Articulation Points}{./graph}{articulation_points.cpp}
+     \includecpp {Centroid Decomposition}{./graph}{centroid_decomposition.cpp}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ String }
+     \includecpp {Manacher}{./string}{manacher.cpp}
+     \includecpp {Suffix Array}{./string}{suffix_array.cpp}
+     \includecpp {Suffix Array $O(n)$}{./string}{suffix_array3.cpp}
+     \includecpp {String matching (rabin-karp)}{./string}{String Matching (Rabin-Karp).cpp}
+     \includecpp {String matching (aho-corasick)}{./string}{String Matching (Aho-Corasick).cpp}
+     \includecpp {KMP}{./string}{kmp.cpp}
+     \includecpp {Suffix tree(largo)}{./string}{suffix tree(largo).cpp}
+     \includecpp {Z-function}{./string}{zfunction.cpp}
+     \includecpp {Palindromic Tree}{./string}{palindromic_tree.cpp}
+     \includecpp {Contar freqs de los palindromos en o(nlog^2)(dmga44)}{./string}{contar freqs de los palindromos en O(nlog^2)(dmga44).cpp}
+     \includecpp {Maximal Suffix}{./string}{maximal_suffix.cpp}
+     \includecpp {Aho-corasick(dmga44)}{./string}{aho-corasick(dmga44).cpp}
+     \includecpp {Suffix tree(corto)}{./string}{suffix tree(corto).cpp}
+     \includecpp {Hashing}{./string}{hashing.cpp}
+     \includecpp {Suffix Automaton}{./string}{suffix_automaton.cpp}
+     \includecpp {Minimum Rotation}{./string}{minimum_rotation.cpp}
+    
+  
+\end{document}

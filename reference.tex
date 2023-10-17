@@ -1,0 +1,107 @@
+\documentclass[letter]{amsart}
+\usepackage[pdftex]{geometry}
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{courier}
+\usepackage{fancyhdr}
+
+\lstset{language=C++}
+\lstset{columns=fullflexible}
+\lstset{basicstyle=\scriptsize\ttfamily}
+\lstset{showspaces=false}
+
+\geometry{landscape}
+\setlength{\topmargin}{-0.25in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\columnsep}{1in}
+\setlength{\columnseprule}{0.2pt}
+\textwidth 9.5in
+
+\pagestyle{fancy}
+\lhead{ Universidad de la Habana: UH-Top }
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\newcommand{\includecpp}[3]{
+  \begin{multicols}{2}
+    [\subsection{#1}\ ]
+    \lstinputlisting[language=c++]{#2/#3}
+  \end{multicols}
+}
+
+\newcommand{\includejava}[3]{
+  \begin{multicols}{2}
+    [\subsection{#1}\ ]
+    \lstinputlisting[language=Java]{#2/#3}
+  \end{multicols}
+}
+
+\newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
+\newcommand{\stirlingsecond}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+
+\begin{document}
+  \thispagestyle{fancy}
+  \begin{center}
+    \Huge\textsc{Team Reference \\ Universidad de la Habana : UH-Top }
+  \end{center}
+  
+  \begin{center}
+    \textbf{ ICPC Caribbean Finals 2024 }\\
+    \textbf{Team Members:} Ariel Gonzales Gomez , Jorge Pichardo Cabrera, Leonardo Artiles Montero\\
+    \textbf{Developed by:} Alfredo Somoza
+  \end{center}  
+
+  \begin{multicols}{2}
+    \tableofcontents
+  \end{multicols}
+
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Extended team reference }
+     \include {.cph}{./extended team reference}{.cph.}
+     \include {Data Structures}{./extended team reference}{data_structures.}
+     \include {Dynamic Programming}{./extended team reference}{dynamic_programming.}
+     \include {Geometry}{./extended team reference}{geometry.}
+     \include {Graph}{./extended team reference}{graph.}
+     \include {Helpers}{./extended team reference}{helpers.}
+     \include {Java}{./extended team reference}{java.}
+     \include {Math}{./extended team reference}{math.}
+     \include {Misc}{./extended team reference}{misc.}
+     \include {Number Theory}{./extended team reference}{number_theory.}
+     \includetex {Reference}{./extended team reference}{reference.tex}
+     \includepy {Render}{./extended team reference}{render.py}
+     \include {String}{./extended team reference}{string.}
+     \includetex {Template}{./extended team reference}{template.tex}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Team-reference-2023 }
+     \include {Data Structures}{./team-reference-2023}{data_structures.}
+     \include {Geometry}{./team-reference-2023}{geometry.}
+     \include {Graph}{./team-reference-2023}{graph.}
+     \include {Math}{./team-reference-2023}{math.}
+     \include {Number Theory}{./team-reference-2023}{number_theory.}
+     \includemd {Readme}{./team-reference-2023}{README.md}
+     \includetex {Reference}{./team-reference-2023}{reference.tex}
+     \includepy {Render}{./team-reference-2023}{render.py}
+     \include {String}{./team-reference-2023}{string.}
+     \includetex {Template}{./team-reference-2023}{template.tex}
+     \include {Useful}{./team-reference-2023}{useful.}
+    
+  
+\end{document}
